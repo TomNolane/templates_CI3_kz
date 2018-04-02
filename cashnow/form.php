@@ -75,12 +75,11 @@ if(isset($_SERVER['HTTP_REFERER'])){
                                 <label class="col-md-3 d-flex align-items-center justify-content-md-end" for="i">Имя</label>
                                 <div class="col-md-7">
                                     <div class="ex-wrapper">
-                                    class="ex-wrapper">
                                     <input type="text" class="form-control ec tip special_form" name="i" id="i" placeholder="Имя" title="Введите свое имя" data-sanitize="capitalize"
-                                        data-validation="custom" data-validation-regexp="^[-А-я ЁёІіЇїҐґЄє']+$" data-validation-error-msg="Введите свое имя"
-                                        required>
+                                    data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свое имя"
+                                    required>
                                     <p class="help-block2">Нужно указать имя</p> 
-                                    <p class="text-muted helpblock">Пример: Олександр</p>
+                                    <p class="text-muted helpblock">Пример: Аида</p>
                                     </div>
                                 </div>
                             </div>
@@ -89,10 +88,10 @@ if(isset($_SERVER['HTTP_REFERER'])){
                                 <div class="col-md-7">
                                     <div class="ex-wrapper">
                                     <input type="text" class="form-control ec tip special_form" name="f" id="f" placeholder="Фамилия" title="Введите свою фамилию"
-                            data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[-А-я ЁёІіЇїҐґЄє']+$" data-validation-error-msg="Введите свою фамилию"
-                            required>
+                                        data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свою фамилию"
+                                        required>
                                     <p class="help-block2">Нужно указать фамилию</p> 
-                                    <p class="text-muted helpblock">Пример: Батейко</p>
+                                    <p class="text-muted helpblock">Пример: Сулейменова</p>
                                     </div>
                                 </div>
                             </div>
@@ -101,10 +100,10 @@ if(isset($_SERVER['HTTP_REFERER'])){
                                 <div class="col-md-7">
                                     <div class="ex-wrapper">
                                     <input type="text" class="form-control ec tip special_form" name="o" id="o" placeholder="Отчество" title="Введите свое отчество"
-                            data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[-А-я ЁёІіЇїҐґЄє']+$" data-validation-error-msg="Введите свое отчество"
-                            required>
+                                    data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свое отчество"
+                                    required>
                                     <p class="help-block2">Нужно указать отчество</p> 
-                                    <p class="text-muted helpblock">Пример: Дмитрович</p>
+                                    <p class="text-muted helpblock">Пример: Аскаркызы</p>
                                     </div>
                                 </div>
                             </div>
@@ -157,7 +156,7 @@ if(isset($_SERVER['HTTP_REFERER'])){
                                 </div>
                             </div>
                             <!-- Скрываем старую форму даты рождения -->
-                            <!-- <div class="form-group row">
+                            <div class="form-group row">
                                 <label class="control-label col-md-3 d-flex align-items-center justify-content-md-end" for="city">Город проживания</label>
                                 <div class="col-md-7">
                                     <div class="ex-wrapper">
@@ -168,7 +167,7 @@ if(isset($_SERVER['HTTP_REFERER'])){
                                         <p class="text-muted helpblock">Пример: Астана</p>
                                     </div>
                                 </div>
-                            </div> -->
+                            </div>
                             <div class="form-group row">
                                 <label class="control-label col-md-3 d-flex align-items-center justify-content-md-end" for="birthdate">Дата рождения</label>
                                 <div class="col-md-7">
@@ -186,10 +185,10 @@ if(isset($_SERVER['HTTP_REFERER'])){
                                 <div class="col-md-7">
                                     <div class="ex-wrapper">
                                     <input type="tel" class="form-control ec tip special_form" name="phone" id="phone" placeholder="Введите свой номер телефона"
-                            title="Введите свой номер телефона" data-validation-error-msg="Введите номер телефона" required>
+                                        title="Введите свой номер телефона" data-validation-error-msg="Введите номер телефона" required>
                                     <span id="phonestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
                                     <p class="help-block2">Нужно указать номер телефона</p> 
-                                    <p class="text-muted helpblock">Пример: 095 725 09 99</p>
+                                    <p class="text-muted helpblock">Пример: 711 123 45 67</p>
                                     </div>
                                 </div>
                             </div>
@@ -205,17 +204,13 @@ if(isset($_SERVER['HTTP_REFERER'])){
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="control-label col-md-3 d-flex align-items-center justify-content-md-end" for="credit">Кредитная история</label>
+                                <label class="col-md-3 d-flex align-items-center justify-content-md-end" for="iin">ИИН</label>
                                 <div class="col-md-7">
-                                    <div class="ex-wrapper ex-arrow">
-                                        <select size="1" class="form-control ec special_form99" name="delays_type" id="delays_type">
-                                            <option selected value="never">Никогда не брал(а) кредитов</option>
-                                            <option value="credit_closed_no_delay">Кредиты закрыты, просрочек не было</option>
-                                            <option value="credit_open_no_delay">Кредиты есть, просрочек нет</option>
-                                            <option value="credit_closed_had_delay">Кредиты закрыты, просрочки были</option>
-                                            <option value="had_delay">Просрочки были, сейчас нет</option>
-                                            <option value="has_delay">Просрочки сейчас есть</option>
-                                        </select>
+                                    <div class="ex-wrapper">
+                                    <input type="text" class="form-control ec tip special_form" name="iin" id="iin" placeholder="Введите свой номер ИИН" maxlength="12" minlength="12"
+                                        title="Введите свой номер иин" data-validation-error-msg="Введите номер ИИН" required>
+                                        <p class="help-block2">Нужно указать номер ИИН</p> 
+                                    <p class="text-muted helpblock">Пример: 118111111000</p>
                                     </div>
                                 </div>
                             </div>

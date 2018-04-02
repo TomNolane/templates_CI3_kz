@@ -101,7 +101,7 @@ $_plural_times = array('раз', 'раза', 'раз');
 // <a style="color: #000000" href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')"   target="_blank"><button class="ex-main-btn ">Получить деньги</button></a>
 // <b>от '.$item["percent"].'%</b>
 
- foreach($arr as $item){ 
+ foreach($data as $item){
     $domen = str_replace('www.','',$_SERVER['HTTP_HOST']);
     $item['link'] = str_replace("#site", $domen, $item['link']);
 echo '
