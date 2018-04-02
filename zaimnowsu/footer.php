@@ -537,7 +537,7 @@
             $('#form_slrd').val(n);
             $('#amount').val(slider3.result.from_value);
         }
-    }, 5);
+    }, 50);
 });
 <?php require 'templates/zaimnowsu/assets/js/owl.carousel.min.js';?>
     $('.owl-carousel').owlCarousel({
@@ -630,8 +630,7 @@ if(isset($_GET['email']))
 
 <!-- всплывающее окошко --> 
 <?php
- require 'yandexmetrika.php';
- require 'googleanalytics.php';
+ require 'yandexmetrika.php'; 
 ?>
 
 <script>

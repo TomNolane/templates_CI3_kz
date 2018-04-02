@@ -140,22 +140,7 @@ function validate1() {
 	}
 	else return true;
 	return false;
-}
-
-function markTarget(target,param, id) 
-{
-    if (typeof yaCounter47625679 == 'undefined') return;
-	if (typeof param == 'undefined') yaCounter47625679.reachGoal(target);
-	else yaCounter47625679.reachGoal(target,param);
-        
-        $.ajax({
-            type: 'POST',
-            url: '/pixel/',
-            data: 'id='+id+'&pixel='+param,
-            success: function(data){ 
-            }
-        });
-}
+} 
 
 function validate(){
 	if (isWebvisor) return true;
